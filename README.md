@@ -183,5 +183,5 @@ vchaska1@remote00:~/thrift-lab/cpp$
 ```
 ___
 
-*NOTE: We have small wrapper scripts, server.sh and client.sh to run the servers and clients. These scripts allow us to set the proper environment variables (in case of C++) and set the dependent jar library classpath (in case of Java) before running the program.* 
+*NOTE: We have small wrapper scripts, server.sh and client.sh to run the servers and clients. These scripts allow us to set the proper environment variables (in case of C++) and set the dependent jar library classpath (in case of Java) before running the program. You'll be expected to provide similar wrapper scripts for programming assignments.* 
 
