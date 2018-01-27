@@ -1,5 +1,7 @@
 # thrift-lab
 
+In this tutorial, we're going to develop a simple remote calculator using Apache Thrift. The client sends an RPC call to the server, giving details of the operation to be performed and the server returns the answer.
+
 ## Setting up the Environment
 
 1. Open the terminal/login to your remote machine and make sure you're in bash shell:
@@ -39,7 +41,7 @@ vchaska1@remote07:~/thrift-lab$
 **TODO: Explain what our application will do.**
 
 
-## Generating stub code and compilation
+## Generating stub code, compilation and execution
 
 Inside thrift-lab directory, you'll see two files:
 * tutorial.thrift : Contains the thrift definitions of interfaces, services and custom datatypes/structs for our application. This is the Interface Definition File. Very well documented. Please read this file.
@@ -74,6 +76,9 @@ Now we'll compile and run the client and servers.
 
 *NOTE: If you're using C++ or Java, you should know how to compile/build your program using "Makefile" and "make" commands. This is because in CS457/557, you're expected to provide a Makefile with all your C++/Java assignments which will compile your code and generate the executables.*
 
+*NOTE: We have small wrapper scripts, server.sh and client.sh to run the servers and clients. These scripts allow us to set the proper environment variables (in case of C++) and set the dependent jar library classpath (in case of Java) before running the program.* 
+
+___
 ### Python
 1. Add the following two lines at the top of your source code for BOTH client and server:
 ```
