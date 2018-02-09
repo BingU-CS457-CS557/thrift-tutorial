@@ -92,8 +92,8 @@ Starting the server...
 ```
 
 4. Make sure that you have entered correct server IP and port in Client code - PythonClient.py. Then, run the client:
-vchaska1@remote07:~/thrift-lab/py$ ./client.sh
 ```
+vchaska1@remote07:~/thrift-lab/py$ ./client.sh
 ping()
 1+1=2
 InvalidOperation: InvalidOperation(whatOp=4, why=u'Cannot divide by 0')
@@ -149,7 +149,9 @@ vchaska1@remote07:~/thrift-lab$ echo $LD_LIBRARY_PATH
 vchaska1@remote07:~/thrift-lab$
 ```
 
-2. Then, generate the binaries by typing the "make" command. Makefile is already present in the repo
+2. Also, verify that you have entered correct server IP and port number in the client code.
+
+3. Then, generate the binaries by typing the "make" command. Makefile is already present in the repo
 ```
 vchaska1@remote07:~/thrift-lab/cpp$ make
 g++  -std=c++11 -lstdc++ -Wall -DHAVE_INTTYPES_H -DHAVE_NETINET_IN_H -I/home/yaoliu/src_code/local/include -Isrc/ -I/home/yaoliu/src_code/local/include/thrift -c src/CppServer.cpp -o CppServer.o
@@ -165,13 +167,13 @@ g++ CppClient.o Calculator.o SharedService.o tutorial_constants.o tutorial_types
 vchaska1@remote07:~/thrift-lab/cpp$
 ```
 
-3. Run the server:
+4. Run the server:
 ```
 vchaska1@remote07:~/thrift-lab/cpp$ ./server.sh
 Starting the server...
 ```
 
-4. Run the client:
+5. Run the client:
 ```
 vchaska1@remote00:~/thrift-lab/cpp$ ./client.sh
 ping()
