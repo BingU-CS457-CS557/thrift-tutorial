@@ -183,5 +183,13 @@ vchaska1@remote00:~/thrift-lab/cpp$
 ```
 ___
 
+## Description:
+
+The server implements Calculator Service defined in tutorial.thrift. This service contains functions like ping(), add(), calculate() and zip(). The add() function simply takes two integers and returns their sum. The calculate() function takes an integer called "logid", and a struct called "work". The "work" struct contains an enum 'Operation', which indicates what operation is to be performed on two integers present in the same struct as 'num1' and 'num2'. If the operation divide by zero, the custom exception "InvalidOperation" is raised. Otherwise, the result of the operation returned back to the client.
+
+The client, after opening a connection, first calls the ping() function. Then it calls the add() function with 1+1. Then to invoke the InvalidOperation exception, it attempts a division by zero. Then client performs a subtraction and checks logs. 
+
+___
+
 *NOTE: We have small wrapper scripts, server.sh and client.sh to run the servers and clients. These scripts allow us to set the proper environment variables (in case of C++) and set the dependent jar library classpath (in case of Java) before running the program. You'll be expected to provide similar wrapper scripts for programming assignments.* 
 
