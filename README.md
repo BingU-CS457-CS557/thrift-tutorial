@@ -85,15 +85,15 @@ A little careful with the first line. It requires that your "gen-py" folder shou
 
 2. Also, make sure that all the thrift related imports should be BELOW the second line, since this line adds the path from which all the python thrift libraries come from.
 
-3. Start the server:
+3. Start the server and pass a port number as argument (please use a different port number):
 ```
-vchaska1@remote00:~/thrift-lab/py$ ./server.sh
+vchaska1@remote00:~/thrift-lab/py$ ./server.sh 9090
 Starting the server...
 ```
 
-4. Make sure that you have entered correct server IP and port in Client code - PythonClient.py. Then, run the client:
+4. Run the client and pass to it the server IP address and port number:
 ```
-vchaska1@remote07:~/thrift-lab/py$ ./client.sh
+vchaska1@remote07:~/thrift-lab/py$ ./client.sh 128.226.114.200 9090
 ping()
 1+1=2
 InvalidOperation: InvalidOperation(whatOp=4, why=u'Cannot divide by 0')
@@ -118,7 +118,7 @@ Note: Recompile with -Xlint:unchecked for details.
 vchaska1@remote07:~/thrift-lab/java$
 ```
 
-2. Run the server by providing it the port number to listen to:
+2. Run the server by providing it the port number to listen to (please use a different port number):
 ```
 vchaska1@remote07:~/thrift-lab/java$ ./server.sh 9090
 Starting the simple server...
@@ -149,9 +149,7 @@ vchaska1@remote07:~/thrift-lab$ echo $LD_LIBRARY_PATH
 vchaska1@remote07:~/thrift-lab$
 ```
 
-2. Also, verify that you have entered correct server IP and port number in the client code.
-
-3. Then, generate the binaries by typing the "make" command. Makefile is already present in the repo
+2. Then, generate the binaries by typing the "make" command. Makefile is already present in the repo
 ```
 vchaska1@remote07:~/thrift-lab/cpp$ make
 g++  -std=c++11 -lstdc++ -Wall -DHAVE_INTTYPES_H -DHAVE_NETINET_IN_H -I/home/yaoliu/src_code/local/include -Isrc/ -I/home/yaoliu/src_code/local/include/thrift -c src/CppServer.cpp -o CppServer.o
@@ -167,15 +165,15 @@ g++ CppClient.o Calculator.o SharedService.o tutorial_constants.o tutorial_types
 vchaska1@remote07:~/thrift-lab/cpp$
 ```
 
-4. Run the server:
+3. Run the server and pass it a port number to listen to (please use a different port number):
 ```
-vchaska1@remote07:~/thrift-lab/cpp$ ./server.sh
+vchaska1@remote07:~/thrift-lab/cpp$ ./server.sh 9090
 Starting the server...
 ```
 
-5. Run the client:
+5. Run the client and pass it the server IP address and port number:
 ```
-vchaska1@remote00:~/thrift-lab/cpp$ ./client.sh
+vchaska1@remote00:~/thrift-lab/cpp$ ./client.sh 128.226.114.207 9090
 ping()
 1 + 1 = 2
 InvalidOperation: Cannot divide by 0
