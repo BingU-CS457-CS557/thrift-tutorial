@@ -34,8 +34,8 @@ using namespace apache::thrift::transport;
 using namespace tutorial;
 using namespace shared;
 
-int main() {
-  boost::shared_ptr<TTransport> socket(new TSocket("localhost", 9090));
+int main(int argc, char *argv[]) {
+  boost::shared_ptr<TTransport> socket(new TSocket(argv[1], stoi(argv[2])));
   boost::shared_ptr<TTransport> transport(new TBufferedTransport(socket));
   boost::shared_ptr<TProtocol> protocol(new TBinaryProtocol(transport));
   CalculatorClient client(protocol);

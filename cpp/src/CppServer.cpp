@@ -129,10 +129,10 @@ class CalculatorCloneFactory : virtual public CalculatorIfFactory {
   }
 };
 
-int main() {
+int main(int argc, char *argv[]) {
  TThreadedServer server(
     boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()),
-    boost::make_shared<TServerSocket>(9090), //port
+    boost::make_shared<TServerSocket>(stoi(argv[1])), //port
     boost::make_shared<TBufferedTransportFactory>(),
     boost::make_shared<TBinaryProtocolFactory>());
 

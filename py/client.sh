@@ -1,3 +1,3 @@
 #!/bin/bash +vx
 
-python src/PythonClient.py
+python src/PythonClient.py $1 $2
