@@ -22,7 +22,7 @@
 import sys
 import glob
 sys.path.append('gen-py')
-sys.path.insert(0, glob.glob('/home/yaoliu/src_code/local/lib/lib/python2.7/site-packages')[0])
+sys.path.insert(0, glob.glob('/home/cs557-inst/thrift-0.13.0/lib/py/build/lib*')[0])
 
 from tutorial import Calculator
 from tutorial.ttypes import InvalidOperation, Operation, Work

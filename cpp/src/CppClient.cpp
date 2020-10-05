@@ -35,9 +35,9 @@ using namespace tutorial;
 using namespace shared;
 
 int main(int argc, char *argv[]) {
-  boost::shared_ptr<TTransport> socket(new TSocket(argv[1], stoi(argv[2])));
-  boost::shared_ptr<TTransport> transport(new TBufferedTransport(socket));
-  boost::shared_ptr<TProtocol> protocol(new TBinaryProtocol(transport));
+  std::shared_ptr<TTransport> socket(new TSocket(argv[1], stoi(argv[2])));
+  std::shared_ptr<TTransport> transport(new TBufferedTransport(socket));
+  std::shared_ptr<TProtocol> protocol(new TBinaryProtocol(transport));
   CalculatorClient client(protocol);
 
   try {
@@ -79,4 +79,3 @@ int main(int argc, char *argv[]) {
     cout << "ERROR: " << tx.what() << endl;
   }
 }
-

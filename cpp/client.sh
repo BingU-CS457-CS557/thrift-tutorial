@@ -1,3 +1,3 @@
 #!/bin/bash +vx
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/home/yaoliu/src_code/local/lib"
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/home/cs557-inst/local/lib"
 ./client $1 $2

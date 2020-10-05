@@ -1,8 +1,8 @@
 GEN_SRC := Calculator.cpp SharedService.cpp tutorial_constants.cpp tutorial_types.cpp shared_constants.cpp shared_types.cpp
 GEN_OBJ := $(patsubst %.cpp,%.o, $(GEN_SRC))
 
-THRIFT_DIR := /home/yaoliu/src_code/local/include
-LIB_DIR := /home/yaoliu/src_code/local/lib/
+THRIFT_DIR := /home/cs557-inst/local/include
+LIB_DIR := /home/cs557-inst/local/lib/
 
 INC := -I$(THRIFT_DIR) -Isrc/ -I$(THRIFT_DIR)/thrift
 
