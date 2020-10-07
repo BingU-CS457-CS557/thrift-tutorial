@@ -1,4 +1,4 @@
 #!/bin/bash +vx
-LIB_PATH=/home/yaoliu/src_code/local/lib/usr/local/lib/libthrift-0.12.0.jar:/home/yaoliu/src_code/local/lib/usr/local/lib/slf4j-log4j12-1.7.12.jar:/home/yaoliu/src_code/local/lib/usr/local/lib/slf4j-api-1.7.12.jar:/home/yaoliu/src_code/local/lib/usr/local/lib/log4j-1.2.17.jar
+LIB_PATH=/home/cs557-inst/local/lib/libthrift-0.13.0.jar:/home/cs557-inst/local/lib/slf4j-simple-1.7.30.jar:/home/cs557-inst/local/lib/slf4j-api-1.7.30.jar:/home/cs557-inst/loca/lib/slf4j-log4j12-1.7.12.jar:/home/cs557-inst/local/lib/javax.annotation-api-1.3.2.jar
 #simple/secure ip port
 java -classpath bin/client_classes:$LIB_PATH JavaClient simple $1 $2
