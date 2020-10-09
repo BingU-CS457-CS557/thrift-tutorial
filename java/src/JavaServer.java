@@ -67,7 +67,7 @@ public class JavaServer {
 
   public static void simple(Calculator.Processor processor) {
     try {
-      TServerTransport serverTransport = new TServerSocket(9090);
+      TServerTransport serverTransport = new TServerSocket(port);
       TServer server = new TSimpleServer(new Args(serverTransport).processor(processor));
 
       // Use this for a multithreaded server
